@@ -1,0 +1,215 @@
+**** ANA MARIA MAYA CERON ****
+
+**** 20_ABR_2023 ****
+
+
+Ejercicio_1 ****************
+
+Algoritmo ejemplo_mientras
+	Definir nota Como Entero
+	Escribir "Ingrese una nota válida"
+	leer nota
+	
+	Mientras nota < 0 o nota >10
+		Escribir "Ingrese la nota de nuevo"
+		leer nota
+	FinMientras
+	Escribir "La nota es correcta"
+FinAlgoritmo
+
+Ejercicio_2 ****************
+
+Algoritmo vocal_secreta
+	Definir vocal Como Caracter
+	Escribir "Ingrese una vocal"
+	leer vocal
+	vocal = Mayusculas(vocal)
+	Mientras vocal <> "A"
+		Escribir "La vocal es incorrecta"
+		Leer vocal
+	FinMientras
+	Mostrar "La vocal es correcta"
+FinAlgoritmo
+
+Ejercicio_3 ****************
+
+Algoritmo Correccion_Mientras
+	Definir num Como Entero
+	Escribir "Ingrese un número par"
+	leer num
+	Mientras num mod 2 == 0 Hacer
+		Escribir "Ingrese otro número"
+		leer num
+	FinMientras
+	Mostrar  "El número es impar"
+FinAlgoritmo
+
+Ejercicio_4 ****************
+
+Algoritmo Correccion_Mientras
+	Definir nota Como Entero
+	Hacer
+		Escribir "Ingrese una nota válida"
+		Leer nota
+	Mientras Que nota < 0 o nota >10
+	escribir "La nota es correcta"
+FinAlgoritmo
+
+Ejercicio_5 ****************
+
+Algoritmo vocal_secreta
+	Definir vocal Como Caracter
+	Escribir "Ingrese una vocal"
+	leer vocal
+	hacer 
+		Escribir "La vocal es incorrecta"
+		Leer vocal
+		vocal = Minusculas(vocal)
+	Mientras que vocal <> "a"
+	Mostrar "la vocal es correcta"
+FinAlgoritmo
+
+Ejercicio_6 ****************
+
+Algoritmo Correccion_HacerMientras
+	definir num Como entero
+	Escribir "Ingrese un número par"
+	leer num
+	Hacer
+		Escribir "Ingrese un número PAR"
+		Leer num
+	Mientras Que num mod 2 == 0 
+	Mostrar "El número es Impar"
+	FinAlgoritmo
+
+Ejercicio_7 ****************
+
+Algoritmo ejemplo_para
+	definir i Como entero
+	para i <- 1 hasta 10 Con Paso 1 Hacer
+		escribir"la tabla del 2 es: " i * 2
+	FinPara
+	FinAlgoritmo
+
+Ejercicio_8 ****************
+
+Algoritmo Proceso MayorNumero
+    Definir cantidad, numero, mayor como Entero
+	
+    Escribir "Ingrese la cantidad de numeros a ingresar:"
+    Leer cantidad
+	
+    Para i<-1 Hasta cantidad Con Paso 1 Hacer
+        Escribir "Ingrese el numero ", i, ":"
+        Leer numero
+        Si numero > mayor Entonces
+            mayor <- numero
+        FinSi
+    FinPara
+	
+    Escribir "El mayor numero ingresado es: ", mayor
+	
+FinProceso
+
+
+**** 3_MAY_2023 ****
+
+
+Ejercicio_1 ****************
+
+Algoritmo bucle_mientras
+	Definir num Como Entero
+	Escribir "Ingrese un numero"
+	leer num
+	Mientras num  >10
+		Escribir "Ingrese otro numero"
+		leer num
+	FinMientras
+FinAlgoritmo
+
+Ejercicio_2 ****************
+
+Algoritmo dos_numeros_enteros
+	Definir contador, ingresado, numero1, numero2 como entero
+	Escribir "Inglese el numero menor"
+	leer numero1
+	Escribir "Ingrese el numero mayor"
+	leer numero2
+	contador = 0
+	Escribir "Ingrese un numero que este dentro del intervalo " numero1 "-" numero2
+	leer ingresado
+	Mientras (ingresado < numero2) y (ingresado > numero1)
+		contador = contador + 1
+		Escribir "Ingrese un numero que este dentro del intervalo " numero1 "-" numero2
+		leer ingresado
+	FinMientras
+	Escribir "Usted ingreso " contador " numeros dentro del intervalo de " numero1 "-" numero2
+FinAlgoritmo
+
+Ejercicio_3 ****************
+
+Algoritmo numero_decimal
+	Definir numero1, numero2 como real
+	Escribir "Ingrese un numero decimal"
+	leer numero1
+	Escribir "Ingrese un nuevo numero"
+	leer numero2
+	Mientras numero2 > numero1
+		contador = contador + 1
+		Escribir "Ingrese un nuevo numero"
+		leer numero2
+	FinMientras
+	Escribir "Usted ingreso un numero menor que " numero1
+FinAlgoritmo
+
+Ejercicio_4 ****************
+
+Algoritmo calcular_nota
+	Definir practica, problemas, teoria, final Como Real
+	Definir cadena_vacia, nombre Como Caracter 
+	
+	cadena_vacia = " "
+	
+	Escribir "Introduce el nombre del alumno a evaluar:"
+	Leer nombre
+	
+	Mientras nombre <> cadena_vacia Hacer
+		Escribir "Introduce la nota práctica de ", nombre, ":"
+		Leer practica
+		Escribir "Introduce la nota de problemas de ", nombre, ":"
+		Leer problemas
+		Escribir "Introduce la nota teórica de ", nombre, ":"
+		Leer teoria
+		
+		Si practica >= 0 Y practica <= 10 Y problemas >= 0 Y problemas <= 10 Y teoria >= 0 Y teoria <= 10 Entonces
+			final = (practica * 0.1) + (problemas * 0.5) + (teoria * 0.4)
+			Escribir "La nota final de ", nombre, " es: ", final
+		Sino
+			Escribir "Las notas deben ser numeros entre 0 y 10"
+		FinSi
+		
+		Escribir "Introduce el nombre del alumno a evaluar:"
+		Leer nombre
+	FinMientras
+FinAlgoritmo
+
+Ejercicio_5 ****************
+
+Algoritmo contar_digitos
+	Definir numero, contador Como Entero
+	
+	Escribir "Ingrese un numero entero y positivo"
+	Leer numero
+	
+	Si numero < 0 Entonces
+		Escribir "El numero ingreado NO es positivo."
+	Sino
+		contador = 0
+		Mientras numero > 0 Hacer
+			numero = trunc(numero / 10)
+			contador = contador + 1
+		FinMientras
+		
+		Escribir "El numero ingresado tiene ", contador, " digitos"
+	FinSi
+FinAlgoritmo
