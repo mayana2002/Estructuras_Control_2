@@ -139,7 +139,7 @@ Algoritmo suma_numeros
 		
 		Escribir "Ingrese un numero"
 		leer num
-		suma <- suma + num
+		suma = suma + num
 		
 		Escribir "¿Desea ingresar mas numeros? Digite: si o no"
 		leer respuesta
@@ -156,11 +156,6 @@ Hacer un algoritmo para calcular la media de los números pares e impares, sólo
 Algoritmo MediaParesImpares
     Definir contadorPares, contadorImpares, sumaPares, sumaImpares, numero Como Entero
     Definir mediaPares, mediaImpares Como Real
-    
-    contadorPares = 0
-    contadorImpares = 0
-    sumaPares = 0
-    sumaImpares = 0
     
     Para i = 1 Hasta 10 Con Paso 1 Hacer
         Escribir "Ingrese un número entero:"
@@ -190,6 +185,7 @@ Ejercicio_9 ****************
 Se pide escribir un programa que calcule la suma de los N primeros números pares. Es decir, si ingresamos el número 5 como valor de N, el algoritmo nos debe realizar la suma de los siguientes valores: 2+4+6+8+10.
 
 Algoritmo SumaNumerosPares
+	Definir suma, par, i, n Como Entero
     Escribir "Ingrese un numero entero positivo: "
     Leer n
     i = 1
@@ -212,11 +208,11 @@ El programa tiene que imprimir los mensajes adecuados para informarle al usuario
 NOTA: Para generar un número aleatorio entre 1 y 10 se puede utilizar la función Aleatorio(limite_inferior, limite_superior) de Pseint.
 
 Algoritmo JuegoAdivinaNumero
+	Definir x como entero
 
     n = Aleatorio(1,10)
-    Escribir "La computadora ha elegido un numero entre 1 y 10. ¡Adivina cuál es!"
+    Escribir "La computadora ha elegido un numero entre 1 y 10. Adivina cual es"
 
-    x = 0 
     mientras x <> n
         Escribir "Ingresa un numero entre 1 y 10:"
         Leer x
@@ -267,24 +263,23 @@ Ejercicio_13 ****************
 Dada una secuencia de numeros ingresados por teclado que finaliza con un -1, por ejemplo: 5,3,0,2,4,4,0,0,2,3,6,0,......,-1; realizar un programa que calcule el promedio de los numeros ingresados. Suponemos que el usuario no ingresara numeros negativos.
 
 Algoritmo EjercicioPromedioConMientras
-		Definir numerador Como Entero;
-		Definir promedio Como Real;
-		Definir contador Como Entero;
+		Definir numerador Como Entero
+		Definir promedio Como Real
+		Definir contador Como Entero
 		
-		contador <- 0;
-		numerador <- 0;
+		contador = 0
 		
 		Mientras (numerador <> -1) Hacer
-			Escribir "Ingrese un numero: ";
-			Leer numerador;
-			Si (numerador <> -1) Entonces
-				promedio <- promedio + numerador;
-				contador <- contador + 1;
+			Escribir "Ingrese un numero: "
+			Leer numerador
+			Si (numerador = -1) Entonces
+				promedio = promedio + numerador
+				contador = contador + 1
 			FinSi
 		FinMientras
 		
-		promedio <- promedio/contador;
-		Escribir "El promedio es: ",promedio;
+		promedio = promedio/contador
+		Escribir "El promedio es ",promedio
 		
 FinAlgoritmo
 
