@@ -1,121 +1,10 @@
 **** ANA MARIA MAYA CERON ****
 
-**** 20_ABR_2023 ****
-
-
-Ejercicio_1 ****************
-
-Algoritmo ejemplo_mientras
-	Definir nota Como Entero
-	Escribir "Ingrese una nota válida"
-	leer nota
-	
-	Mientras nota < 0 o nota >10
-		Escribir "Ingrese la nota de nuevo"
-		leer nota
-	FinMientras
-	Escribir "La nota es correcta"
-FinAlgoritmo
-
-Ejercicio_2 ****************
-
-Algoritmo vocal_secreta
-	Definir vocal Como Caracter
-	Escribir "Ingrese una vocal"
-	leer vocal
-	vocal = Mayusculas(vocal)
-	Mientras vocal <> "A"
-		Escribir "La vocal es incorrecta"
-		Leer vocal
-	FinMientras
-	Mostrar "La vocal es correcta"
-FinAlgoritmo
-
-Ejercicio_3 ****************
-
-Algoritmo Correccion_Mientras
-	Definir num Como Entero
-	Escribir "Ingrese un número par"
-	leer num
-	Mientras num mod 2 == 0 Hacer
-		Escribir "Ingrese otro número"
-		leer num
-	FinMientras
-	Mostrar  "El número es impar"
-FinAlgoritmo
-
-Ejercicio_4 ****************
-
-Algoritmo Correccion_Mientras
-	Definir nota Como Entero
-	Hacer
-		Escribir "Ingrese una nota válida"
-		Leer nota
-	Mientras Que nota < 0 o nota >10
-	escribir "La nota es correcta"
-FinAlgoritmo
-
-Ejercicio_5 ****************
-
-Algoritmo vocal_secreta
-	Definir vocal Como Caracter
-	Escribir "Ingrese una vocal"
-	leer vocal
-	hacer 
-		Escribir "La vocal es incorrecta"
-		Leer vocal
-		vocal = Minusculas(vocal)
-	Mientras que vocal <> "a"
-	Mostrar "la vocal es correcta"
-FinAlgoritmo
-
-Ejercicio_6 ****************
-
-Algoritmo Correccion_HacerMientras
-	definir num Como entero
-	Escribir "Ingrese un número par"
-	leer num
-	Hacer
-		Escribir "Ingrese un número PAR"
-		Leer num
-	Mientras Que num mod 2 == 0 
-	Mostrar "El número es Impar"
-	FinAlgoritmo
-
-Ejercicio_7 ****************
-
-Algoritmo ejemplo_para
-	definir i Como entero
-	para i <- 1 hasta 10 Con Paso 1 Hacer
-		escribir"la tabla del 2 es: " i * 2
-	FinPara
-	FinAlgoritmo
-
-Ejercicio_8 ****************
-
-Algoritmo Proceso MayorNumero
-    Definir cantidad, numero, mayor como Entero
-	
-    Escribir "Ingrese la cantidad de numeros a ingresar:"
-    Leer cantidad
-	
-    Para i<-1 Hasta cantidad Con Paso 1 Hacer
-        Escribir "Ingrese el numero ", i, ":"
-        Leer numero
-        Si numero > mayor Entonces
-            mayor <- numero
-        FinSi
-    FinPara
-	
-    Escribir "El mayor numero ingresado es: ", mayor
-	
-FinProceso
-
-
 **** 3_MAY_2023 ****
 
 
 Ejercicio_1 ****************
+Escriba un programa en el cual se ingrese un número y mientras ese número sea mayor de 10 se pedirá el número de nuevo.
 
 Algoritmo bucle_mientras
 	Definir num Como Entero
@@ -128,6 +17,8 @@ Algoritmo bucle_mientras
 FinAlgoritmo
 
 Ejercicio_2 ****************
+Escriba un programa que solicite dos números enteros (mínimo y máximo). A continuación, se debe pedir al usuario que ingrese números enteros situados entre el máximo y mínimo. Cada vez que un número se encuentre entre ese intervalo, se sumara uno a una variable.
+El programa terminará cuando se escriba un número que no pertenezca a ese intervalo, y al finalizar se debe mostrar por pantalla la cantidad de números ingresados dentro del intervalo
 
 Algoritmo dos_numeros_enteros
 	Definir contador, ingresado, numero1, numero2 como entero
@@ -147,6 +38,7 @@ Algoritmo dos_numeros_enteros
 FinAlgoritmo
 
 Ejercicio_3 ****************
+escriba un programa que solicite al usuano numeros decimales mientras que el usuario escriba números mayores al primero que se ingresó. Por ejemplo: si el usuario ingresa como primer número un 3.1, y luego ingresa un 4, el programa debe solicitar un tercer número. El programa continuará solicitando valores sucesivamente mientras los valores ingresados sean mayores que 3.1, caso contrario, el programa finaliza
 
 Algoritmo numero_decimal
 	Definir numero1, numero2 como real
@@ -163,6 +55,7 @@ Algoritmo numero_decimal
 FinAlgoritmo
 
 Ejercicio_4 ****************
+Calcular las calificaciones de un grupo de alumnos. La nota final de cada alumno se calcula según el siguiente criterio: la parte práctica vale el 10%; la parte de problemas vale el 50% y la parte teórica el 40%. El programa leerá el nombre del alumno, las tres notas obtenidas, mostrará el resultado por pantalla, y a continuación volverá a pedir los datos del siguiente alumno hasta que el nombre sea una cadena vacía. Las notas deben estar comprendidas entre O y 10, y si no están dentro de ese rango no se imprimirá el promedio y se mostara un mensale de error.
 
 Algoritmo calcular_nota
 	Definir practica, problemas, teoria, final Como Real
@@ -194,6 +87,7 @@ Algoritmo calcular_nota
 FinAlgoritmo
 
 Ejercicio_5 ****************
+Escribir un programa que calcule cuántos dígitos tiene un número entero positivo sin convertirlo a cadena (pista: se puede hacer dividiendo varias veces entre 10). Nota: investigar la función trunco.
 
 Algoritmo contar_digitos
 	Definir numero, contador Como Entero
@@ -213,3 +107,255 @@ Algoritmo contar_digitos
 		Escribir "El numero ingresado tiene ", contador, " digitos"
 	FinSi
 FinAlgoritmo
+
+Ejercicio_6 ****************
+Realizar un programa que solicite al usuario su código de usuario (un número entero mayor que cero) y su contraseña numérica (otro número entero positivo). El programa no le debe permitir continuar hasta que introduzca como código 1024 y como contraseña 4567. El programa finaliza cuando ingresa
+
+Algoritmo clave_contraseña
+	Definir codigo, contraseña Como Entero
+		Escribir "Ingrese su código"
+		leer codigo
+		Escribir "Ingrese su contraseña"
+		leer contraseña
+		Si codigo = 1024 y contraseña = 4567 Entonces 
+			Escribir "El codigo o contraseña ingresados son CORRECTOS"
+		SiNo
+			Escribir "El codigo o contraseña ingresados son INCORRECTOS, intente nuevamente"
+		Finsi
+FinAlgoritmo
+
+Ejercicio_7 ****************
+Se debe realizar un programa que:
+1º) Pida por teclado un número (entero positivo).
+2°) Pregunte al usuario si desea introducir o no otro número.
+3°) Repita los pasos 1° y 2º mientras que el usuario no responda n/N (no).
+4°) Muestre por pantalla la suma de los números introducidos por el usuario.
+
+Algoritmo suma_numeros
+	Definir suma, num Como Entero
+	Definir respuesta Como Caracter
+	
+	mientras respuesta <> "no" y respuesta <> "No"
+		
+		Escribir "Ingrese un numero"
+		leer num
+		suma <- suma + num
+		
+		Escribir "¿Desea ingresar mas numeros? Digite: si o no"
+		leer respuesta
+	FinMientras 
+	
+	Escribir "La suma de los numero ingresados es: " suma
+	leer num
+	
+FinAlgoritmo
+
+Ejercicio_8 ****************
+Hacer un algoritmo para calcular la media de los números pares e impares, sólo se ingresará diez números.
+
+Algoritmo MediaParesImpares
+    Definir contadorPares, contadorImpares, sumaPares, sumaImpares, numero Como Entero
+    Definir mediaPares, mediaImpares Como Real
+    
+    contadorPares = 0
+    contadorImpares = 0
+    sumaPares = 0
+    sumaImpares = 0
+    
+    Para i = 1 Hasta 10 Con Paso 1 Hacer
+        Escribir "Ingrese un número entero:"
+        Leer numero
+        
+        Si numero MOD 2 = 0 Entonces
+            contadorPares = contadorPares + 1
+            sumaPares = sumaPares + numero
+        Sino
+            contadorImpares = contadorImpares + 1
+            sumaImpares = sumaImpares + numero
+        FinSi
+    FinPara
+    
+    Si contadorPares > 0 Entonces
+        mediaPares = sumaPares / contadorPares
+        Escribir "La media de los números pares es:", mediaPares
+    FinSi
+    
+    Si contadorImpares > 0 Entonces
+        mediaImpares = sumaImpares / contadorImpares
+        Escribir "La media de los numeros impares es:", mediaImpares
+    FinSi
+FinAlgoritmo
+
+Ejercicio_9 ****************
+Se pide escribir un programa que calcule la suma de los N primeros números pares. Es decir, si ingresamos el número 5 como valor de N, el algoritmo nos debe realizar la suma de los siguientes valores: 2+4+6+8+10.
+
+Algoritmo SumaNumerosPares
+    Escribir "Ingrese un numero entero positivo: "
+    Leer n
+    i = 1
+    suma = 0
+    mientras i <= n
+        par = i * 2
+        suma = suma + par
+        i = i + 1
+    fin mientras
+    Escribir "La suma de los primeros "  n  " numeros pares es: "  suma
+FinAlgoritmo
+
+Ejercicio_10 ****************
+Programar un juego donde la computadora elige un número al azar entre 1 y 10, y a continuación el jugador tiene que adivinario. La estructura del programa es la siguiente:
+1º) El programa elige al azar un número n entre 1 y 10.
+2°) El usuario ingresa un número x.
+3°) Si x no es el número exacto, el programa indica si n es más grande o más pequeño que el número ingresado.
+4°) Repetimos desde 2) hasta que x sea igual a n.
+El programa tiene que imprimir los mensajes adecuados para informarle al usuario qué hacer y qué pasó hasta que adivine el número.
+NOTA: Para generar un número aleatorio entre 1 y 10 se puede utilizar la función Aleatorio(limite_inferior, limite_superior) de Pseint.
+
+Algoritmo JuegoAdivinaNumero
+
+    n = Aleatorio(1,10)
+    Escribir "La computadora ha elegido un numero entre 1 y 10. ¡Adivina cuál es!"
+
+    x = 0 
+    mientras x <> n
+        Escribir "Ingresa un numero entre 1 y 10:"
+        Leer x
+
+        si x < n entonces
+            Escribir "El numero elegido por la computadora es mas grande."
+        sino 
+si x > n entonces
+Escribir "El numero elegido por la computadora es mas pequeño."
+sino
+Escribir "Has adivinado el numero."
+finsi
+finsi
+finmientras
+FinAlgoritmo
+
+Ejercicio_11 ****************
+Escriba un programa que valide si una nota esta entre 0 y 10, sino este entre 0 y 10 la nota se pedirá de nuevo hasta que la nota sea correcta.
+
+Algoritmo nota_correcta
+	Definir nota como entero
+	Escribir "Ingrese la nota"
+	leer nota
+	
+	Mientras nota <0  o nota >10 Hacer
+		Escribir "Ingrese la nota nuevamente"
+		leer nota
+	FinMientras
+	Escribir "La nota es correcta"
+FinAlgoritmo
+
+Ejercicio_12 ****************
+Escriba un programa en el cual se ingrese un valor limite positivo, y a continuación solicite numeros al usuario hasta que la suma de los numeros introducidos supere el limite inicial.
+
+Algoritmo numero_limite
+	Definir lim, num como entero
+	Escribir "Ingrese un numero limite"
+	leer lim
+	Mientras contador < lim Hacer
+		Escribir "Ingrese un numero para sumar"
+		leer num
+	    contador=contador + num
+	FinMientras
+	Escribir "Se supero el numero limite de " lim "  y la suma de los numero ingresados fue " contador
+FinAlgoritmo
+
+Ejercicio_13 ****************
+Dada una secuencia de numeros ingresados por teclado que finaliza con un -1, por ejemplo: 5,3,0,2,4,4,0,0,2,3,6,0,......,-1; realizar un programa que calcule el promedio de los numeros ingresados. Suponemos que el usuario no ingresara numeros negativos.
+
+Algoritmo EjercicioPromedioConMientras
+		Definir numerador Como Entero;
+		Definir promedio Como Real;
+		Definir contador Como Entero;
+		
+		contador <- 0;
+		numerador <- 0;
+		
+		Mientras (numerador <> -1) Hacer
+			Escribir "Ingrese un numero: ";
+			Leer numerador;
+			Si (numerador <> -1) Entonces
+				promedio <- promedio + numerador;
+				contador <- contador + 1;
+			FinSi
+		FinMientras
+		
+		promedio <- promedio/contador;
+		Escribir "El promedio es: ",promedio;
+		
+FinAlgoritmo
+
+Ejercicio_14 ****************
+Teniendo en cuenta que la clave es "eureka", escribir un programa que nos pida ingresar una clave. Sólo se cuenta con 3 intentos para acertar, si fallamos los 3 intentos se debera mostrar un mensaje indicándonos que hemos agotado esos 3 intentos. Si acertamos la
+clave se deberá mostrar un mensaje que indique que se ha ingresado al sistema correctamente.
+
+Algoritmo VerificarClave
+    Definir clave, claveIngresada Como Caracter
+	definir intento, intentosMaximos Como Entero
+	
+    clave = "eureka"
+    intentosMaximos = 3
+    intento = 1
+	
+    Hacer
+        Escribir "Ingrese la clave"
+        Leer claveIngresada
+		
+        Si claveIngresada = clave Entonces
+            Escribir "Clave correcta"
+            intento = intentosMaximos + 1
+        Sino
+            Escribir "Clave incorrecta, intente de nuevo"
+			
+            Si intento = intentosMaximos Entonces
+                Escribir "Has agotado tus 3 intentos"
+            Sino
+                Escribir "Te quedan ", intentosMaximos - intento, " intentos"
+                intento = intento + 1
+            Fin Si
+        Fin Si
+		Mientras que intento <= intentosMaximos
+			
+FinAlgoritmo
+
+
+Ejercicio_15 ****************
+Escribir un programa que lea números enteros hasta teclear O (cero). Al finalizar el programa se debe mostrar el máximo numero ingresado, el minimo, y el promedio de todos ellos.
+
+Algoritmo LeerNumeros
+    Definir numero, maximo, minimo, suma, contador Como Entero
+	
+    contador = 0
+	
+    Hacer
+        Escribir "Ingrese un numero, o ingrese 0 para terminar"
+        Leer numero
+		
+        Si numero <> 0 Entonces
+            Si numero > maximo Entonces
+                maximo = numero
+            Fin Si
+			
+            Si numero < minimo Entonces
+                minimo = numero
+            Fin Si
+			
+            suma = suma + numero
+            contador = contador + 1
+        Fin Si
+		
+		Mientras que numero <> 0
+			
+			Si contador > 0 Entonces
+				promedio = suma / contador
+				Escribir "El numero maximo fue ", maximo
+				Escribir "El numero minimo fue ", minimo
+				Escribir "El promedio de los numeros fue ", promedio
+			finsi
+FinAlgoritmo
+
+
+
